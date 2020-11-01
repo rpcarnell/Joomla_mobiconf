@@ -1,0 +1,136 @@
+<h2 class="popup_title bold500">{{title}}</h2>
+<div class="popup_content dialog" dialog>    
+    <div class="main clearfix" data-ng-bind-html="message">
+    </div>
+    <div class="footer" ng-if="buttonsArray">        
+        <div class="buttons_wrapper">            
+            <a class="button" ng-repeat="button in buttonsArray" ng-class="button.style" ng-click="buttonClick(button.result)">{{button.caption}}</a>
+        </div>
+    </div>
+</div>
+<div id="login_box" class="userbox">
+    <div id="login_menu">
+        <a data-ng-class="{current: activeTab === 'join'}" data-ng-click="switchTab('join')">{{getTranslation('Signup_Signin_Popup_Join')}}</a>
+        <a data-ng-class="{current: activeTab === 'signin'}" data-ng-click="switchTab('signin')">{{getTranslation('Signup_Signin_Popup_SignIn')}}</a>
+    </div>
+    <div id="login_screens">
+        <div id="join" data-ng-class="{'active': activeTab === 'join'}">
+            <hgroup>
+                <h2>{{getTranslation('Signup_Signin_Popup_Join_Header1')}}</h2>
+                <h4>{{getTranslation('Signup_Signin_Popup_Join_Header2')}}</h4>
+            </hgroup>
+            <form id="registerForm" ng-submit="register($event)">
+                <div class="form_row field_container">
+                    <label>{{getTranslation('Signup_Signin_Popup_Join_Email')}}</label>
+					<div class="inputWrapper">
+                    	<input type="text" name="userName" ng-model="userName" validate="'empty|email'" validation-no-success="true" validation-group="'join'" autocomplete-hack />
+					</div>
+                </div>
+        
+                <div class="form_row field_container">
+                    <label>{{getTranslation('Signup_Signin_Popup_Join_Password')}}</label>
+					<div class="inputWrapper">
+                    	<input type="password" name="password" ng-model="password" validate="'empty|length'" data-minlength="6" validation-no-success="true" validation-group="'join'" autocomplete-hack />
+					</div>
+                </div>
+
+                <div class="form_row field_container">
+					<label for="repassword">{{getTranslation('Signup_Signin_Popup_Join_Re_Enter')}}</label>
+					<div class="inputWrapper">
+						<input type="password" id="repassword" name="repassword" ng-model="repassword" validate="'empty|length'" data-minlength="6" validation-no-success="true" validation-group="'join'" />
+                    </div>
+                </div>
+
+                <input type="submit" name="submit" value="{{getTranslation('Signup_Signin_Popup_Join_Btn')}}" class="button primary bolder" />
+
+                <div class="loader small"></div>
+                <div class="error bottomLineError" ng-show="registerError">
+                    <h3>{{registerError}}</h3>
+                </div>
+            </form>
+            <footer ng-bind-html="getTranslationHtml('Signup_Signin_Popup_Join_Privacy')"></footer>
+
+        </div>
+        <div id="signin" data-ng-class="{'active': activeTab === 'signin'}">
+            <hgroup>
+                <h2>{{getTranslation('Signup_Signin_Popup_SignIn_Header1')}}</h2>
+                <h4>{{getTranslation('Signup_Signin_Popup_SignIn_Header2')}}</h4>
+            </hgroup>
+            <form id="loginForm" ng-submit="login($event)">
+                <div class="form_row field_container">
+                    <label for="userName">{{getTranslation('Signup_Signin_Popup_SignIn_Email')}}</label>
+					<div class="inputWrapper">
+                    	<input type="text" id="userName" name="userName" ng-model="userName" validate="'empty|email'" validation-no-blur="true" validation-no-success="true" validation-group="'login'" autocomplete-hack />
+					</div>
+                </div>
+        
+                <div class="form_row field_container">
+                    <label for="password">{{getTranslation('Signup_Signin_Popup_SignIn_Password')}}</label>
+					<div class="inputWrapper">
+                    	<input type="password" id="password" name="password" ng-model="password" validate="'empty'" validation-no-blur="true" validation-no-success="true" validation-group="'login'" autocomplete-hack />
+					</div>
+                </div>
+
+                <input type="submit" name="submit" value="{{getTranslation('Signup_Signin_Popup_SignIn_Btn')}}" class="button primary bolder" />
+
+                <div class="loader small"></div>
+                <div class="error bottomLineError" ng-show="loginError">
+                    <h3>{{loginError}}</h3>
+                </div>
+            </form>
+            
+            <a data-ng-click="switchTab('forgotPassword')">{{getTranslation('Signup_Signin_Popup_SignIn_Forgot_Psw')}}</a>
+                        
+        </div>
+        <div id="forgot_password" data-ng-class="{'active': activeTab === 'forgotPassword'}">
+            <hgroup>
+                <h2>{{getTranslation('Signup_Signin_Popup_SignIn_Forgot_Psw')}}</h2>
+                <h4 ng-bind-html="getTranslationHtml('Signup_Signin_Popup_ForgotPsw_Header')"></h4>
+
+            </hgroup>
+            <form ng-submit="resetPasswordRequest()" ng-show="!resetPasswordSent">
+                <div class="form_row field_container">
+                    <label>{{getTranslation('Signup_Signin_Popup_ForgotPsw_Email')}}</label>
+					<div class="inputWrapper">
+                   		<input type="text" name="email" ng-model="email" validate="'empty|email'" validation-no-blur="true" validation-no-success="true" validation-group="'password'" autocomplete-hack />
+					</div>
+                </div>
+
+                <input type="submit" name="submit" value="{{getTranslation('Signup_Signin_Popup_ForgotPsw_Btn')}}" class="button primary bolder" />
+            </form>
+			<div class="loader small"></div>
+            <div ng-show="resetPasswordSent">
+                <h3>{{getTranslation('Signup_Signin_Popup_ForgotPsw_Sent')}}</h3>
+            </div>
+            <div class="error bottomLineError" ng-show="resetPasswordFail">
+                <h3>{{getTranslation('Signup_Signin_Popup_ForgotPsw_Sent_Faild')}}</h3>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="editor" liveview-stop-update>
+    <!-- Wizard Menu -->
+    <div id="wizard_menu" class="clearfix">
+        <a ng-click="$state.go('home.views')" class="app_pages" ng-class="{selected: !$state.includes('home.views.style')}" accesskey="p">
+            <span><span class="icon"></span>{{getTranslation('Edit_Page_Tabs_AppPages')}}</span>
+        </a>
+        <a ng-click="$state.go('home.views.style')" ng-class="{selected: $state.includes('home.views.style')}" accesskey="s">
+            <span><span class="icon"></span>{{getTranslation('Edit_Page_Tabs_StyleNav')}}</span>
+        </a>
+    </div>
+
+    <!-- My Pages -->
+    <div id="my_pages" ui-view="myPages"></div>
+
+    <!-- Current Editor -->
+    <div class="editor" ui-view="editor"></div>
+
+    <!-- All Pages --> 
+    <div ui-view="pagesList"></div>
+
+    <!-- Upload -->
+    <div ui-view="upload"></div>
+</div>
+
+<!-- liveview --> 
+<div id="liveview" ui-view="liveview"></div>

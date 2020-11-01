@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="MbDesign">
+            <message>Mobile Design</message>
+	</layout>
+	<state>
+		<name>Default</name>
+		<description>It should show up</description>
+	</state>
+</metadata>

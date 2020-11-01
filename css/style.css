@@ -1,0 +1,499 @@
+select{
+    padding: 5px;
+    background: #fff;
+}
+#mainContainer
+{
+    position: relative;
+}
+#chooseAppType, #customizeApp, #customizeLook 
+{
+   position: absolute;
+   top: 120px;
+   left: 370px;
+}
+#iconChooser
+{
+    margin-top: 120px;
+    
+}
+#iconsList
+{
+    border: 1px solid #777;
+    border-radius: 5px;
+    padding: 5px;
+    background: #555;
+}
+
+#customizeApp, #customizeLook
+{
+    top: 160px;
+    display: none;
+}
+.custTab
+{
+    font-weight: bold;
+    float: left;
+    margin-right: 5px;
+    background: #ddd;
+    padding: 5px;
+}
+#customizeTabs
+{
+   position: absolute;
+   top: 120px;
+   left: 370px;
+}
+#diviPhone
+{
+    background: #fff;
+    width: 700px;
+    padding: 5px;
+    margin: 5px;
+    position: relative;
+}
+ 
+#diviPhoneContent,#diviPhoneContentOverlay
+{
+    position: absolute;
+    top: 110px;
+    left: 63px;
+    background: rgb(39, 39, 39);
+    width: 262px;
+    height: 445px;
+    
+}
+#diviPhoneContModf
+{
+     position: absolute;
+    top: 149px;
+    left: 63px;
+    /*background: rgb(39, 39, 39);*/
+    width: 262px;
+    height: 415px;
+    color: #fff;
+  
+    padding: 0px;
+}
+#diviPhoneContent
+{
+    z-index: 3;
+    opacity: 0;
+}
+#diviPhoneContentOverlay
+{
+    z-index: 2;
+    /*border: 1px solid #0f0;*/ 
+    opacity: 1;
+}
+#iPhonePreviewTitle {
+    background-color: rgb(82,82,82);/*rgb(160,113,52);*/
+     
+    color: rgb(255, 255, 255);
+    display: block;
+    font-family: helvetica,arial;
+    font-size: 23px;
+    font-weight: bold;
+    height: 26px;
+    left: 63px;
+    line-height: 29px;
+    overflow: hidden;
+    padding-top: 8px;
+    padding-bottom: 5px;
+    position: absolute;
+    text-align: center;
+    top: 110px;
+    width: 262px;
+    z-index: 4;
+}
+#iPhoneBottom {
+    background-color: #aaa; /* rgb(200, 161, 108);
+   /* border-bottom: 10px solid rgb(39, 39, 39);*/
+    color: rgb(255, 255, 255);
+    display: block;
+    font-family: helvetica,arial;
+    font-size: 6px;
+    font-weight: bold;
+    height: 30px;
+    left: 0px;
+     
+    overflow: hidden;
+    padding-top: 6px;
+    padding-bottom:  10px;
+    position: absolute;
+    text-align: left;
+    top: 368px;
+    width: 259px;
+    z-index: 4;
+    padding-left: 3px;
+     
+   /* border: 1px solid #ff0;*/
+}
+.iPhoneMenu
+{
+    height: 34px;
+    float: left;
+    margin-right: 15px;
+}
+.androidMenu
+{
+    height: 34px;
+    float: left;
+    margin-right: 14px;
+}
+#divAndroid
+{
+    background: #fff;
+    width: 700px;
+    padding: 5px;
+    margin: 5px;
+    position: relative;
+}
+#divAndroidContent, #divAndroidContentOverlay
+{
+    position: absolute;
+    top: 105px;
+    left: 62px;
+    background: rgb(15,15,15);
+    width: 278px;
+    height: 436px;
+   
+    
+}
+#divAndroidContModf
+{
+    position: absolute;
+    top: 144px;
+    left: 62px;
+  /*  background: rgb(15,15,15);*/
+    width: 278px;
+    height: 397px;
+    color: #fff;
+}
+#androidBottom {
+   background-color: rgb(200, 161, 108);
+     
+    color: rgb(255, 255, 255);
+    display: block;
+    font-family: helvetica,arial;
+    font-size: 6px;
+    font-weight: bold;
+    height: 30px;
+    left: 0px;
+    
+    overflow: hidden;
+    padding: 0px;
+    position: absolute;
+    text-align: left;
+    top: 354px;
+    width: 274px;
+    z-index: 4;
+    padding-top: 3px;
+    padding-left: 3px;
+     padding-bottom:  10px;
+     
+ 
+    
+}
+#divAndroidContent{
+     opacity: 0;
+    z-index: 3;
+     
+}
+#divAndroidContentOverlay
+{
+    opacity: 1;
+    z-index: 2;
+}
+#androidPreviewTitle
+{
+     background-color: rgb(160,113,52);
+    
+    color: rgb(255, 255, 255);
+    display: block;
+    font-family: helvetica,arial;
+    font-size: 23px;
+    font-weight: bold;
+    height: 26px;
+    left:  63px;
+    line-height: 29px;
+    overflow: hidden;
+    padding-top: 8px;
+    padding-bottom: 5px;
+    position: absolute;
+    text-align: center;
+    top: 105px;
+    width: 276px;
+    z-index: 4;
+}
+#setUpBack, #setUpBack_2
+{
+    content: ".";
+    display: block;
+    height: 0px;
+    line-height: 0;
+    /*font-size: 0px;*/
+    clear: both;
+     
+}
+#setUpBack li
+    {
+    background-color: rgb(255, 255, 255);
+    height: 35px;
+    padding-top: 119px;
+    width: 100px;
+    border: 1px solid rgb(206, 206, 206);
+    margin: 5px;
+    background-image: url("../images/mobicons.png");
+    background-repeat: no-repeat;
+    float: left;
+    display: block;
+    padding-left: 10px;
+    color: #a00;
+    font-size: 14px;
+}
+
+#setUpBack_2 li
+    {
+    background-color: rgb(255, 255, 255);
+    height: 75px;
+    padding: 5px;
+    width: 75px;
+    border: 1px solid rgb(206, 206, 206);
+    margin: 5px;
+    background-image: url("../images/mobicons.png");
+    background-repeat: no-repeat;
+    float: left;
+    display: block;
+    padding-left: 10px;
+    color: #a00;
+    font-size: 14px;
+}
+
+#music{
+   background-position: -172px -956px;
+}
+#blog
+{
+    background-position: -51px -1105px;
+}
+#education
+{
+    background-position: -174px -1105px;
+}
+#events
+{
+    background-position: -293px -956px;
+}
+#business
+{
+    background-position: -51px -956px;
+}
+#photography
+{
+    background-position: -293px -1105px;
+}
+#restaurants
+{
+    background-position: -414px -956px;
+}
+#other
+{
+    background-position: -413px -1105px;
+}
+
+#left .form2 .inputContaner ul.resultsList {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: rgb(255, 255, 255);
+    border-color: -moz-use-text-color rgb(194, 194, 194) rgb(194, 194, 194);
+    border-image: none;
+    border-style: none solid solid;
+    border-width: medium 1px 1px;
+    display: none;
+    max-height: 308px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: 0px;
+    position: relative;
+    right: -42px;
+    top: 0px;
+    width: 400px;
+    z-index: 10;
+}
+#left .form2 .inputContaner ul, #left .form2 .inputContaner li {
+    float: none;
+}
+
+#iPhoneOutContent, #androidOutContent
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 360px;
+   max-height: 360px;
+   overflow: hidden;
+   padding: 5px;
+   background: #ddd;/*#e8d9c4;*/
+   color: #000;
+    width: 96%;
+}
+#iPhoneOutContent 
+{
+    height: 380px;
+    max-height: 380px;
+    width: 96%;
+}
+#mobiconfWrap
+{
+    position: relative;
+}
+#right_search
+{
+    background: #fff;
+    padding: 10px;
+    position: absolute;
+    top: 700px;
+    left: 400px;
+    width: 200px;
+    border-radius: 5px;
+}
+#next2
+{
+    background: #fff;
+    padding: 0px;
+    float: left;
+    margin-left: 370px;
+    margin-top: 130px;
+    width: 400px;
+    border-top: 1px solid rgb(190,190,190);
+}
+#right_search input, #next2 input
+{
+    width: 100px;
+    padding: 5px;
+    background: #ddd;
+}
+ul.resultsList
+{
+      
+}
+.fbresPage
+{
+    color: #a00;
+     font-size: 10px; 
+}
+ul.resultsList li span{
+    color: rgb(100,100,100);
+    margin-bottom: 5px;
+}
+.videoTitle
+{
+    /*float: right;*/
+    font-weight: bold;
+    font-size: 14px;
+}
+.videothumb
+{
+    width: 100px;
+    float: left;
+    margin-right: 5px;
+}
+.videolayer
+{
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    
+}
+.gradientFrame
+{
+    padding: 3px;
+    border: 1px solid #ddd;
+    border-radius: 2px;
+    margin-bottom: 7px;
+    margin-right: 10px;
+    font-size: 14px;
+    float: left;
+}
+.colorGradient
+{
+    background: #aaa; 
+    margin: 0px; 
+    margin-bottom: 2px;
+    width: 180px;
+    height: 50px;
+}
+#desert
+{
+    background-image: url("../images/unbenannt.png");
+    background-repeat: no-repeat;
+    background-position: -117px -42px;
+}
+
+#forest
+{
+    background-image: url("../images/unbenannt.png");
+    background-repeat: no-repeat;
+    background-position: -342px -42px;
+}
+#raspberry
+{
+    background-image: url("../images/unbenannt.png");
+    background-repeat: no-repeat;
+    background-position: -344px -195px;
+}
+#ice
+{
+    background-image: url("../images/unbenannt.png");
+    background-repeat: no-repeat;
+    background-position: -566px -42px;
+}
+
+#lavender
+{
+    background-image: url("../images/unbenannt.png");
+    background-repeat: no-repeat;
+    background-position: -789px -42px;
+}
+
+#stone
+{
+    background-image: url("../images/unbenannt.png");
+    background-repeat: no-repeat;
+    background-position: -569px -195px;
+}
+
+#pure_orange
+{
+    background-image: url("../images/unbenannt.png");
+    background-repeat: no-repeat;
+    background-position: -118px -204px;
+}
+
+.iconls
+{
+    width: 30px;
+    
+}
+
+#urlwarning
+{
+    color: #f00;
+    margin-left: 2px;
+}
+.err
+{
+    color: #f00;
+}
+
+#complete{
+    padding: 10px;
+    margin: 5px;
+    background: #eee;
+    border: 1px solid #777;
+    border-radius: 5px;
+    width: 30%;
+}

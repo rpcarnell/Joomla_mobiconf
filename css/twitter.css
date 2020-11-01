@@ -1,0 +1,226 @@
+.profile-overview {
+    border-bottom: 1px solid rgb(230, 230, 230);
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    z-index: 1;
+}
+.profile-overview .stats-name {
+    text-transform: uppercase;
+    color: rgb(153, 153, 153);
+    font-size: 10px;
+    line-height: 16px;
+    overflow: hidden;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    text-overflow: ellipsis;
+}
+.profile-overview .stats-count {
+    font-size: 10px;
+    color: rgb(51, 51, 51);
+    line-height: 18px;
+    font-weight: bold;
+}
+.profile-overview .stats-count-group {
+    -moz-box-flex: 1;
+    flex: 1 1 0%;
+    border-left: thin solid rgb(230, 230, 230);
+    padding: 6px 12px 8px;
+}
+.profile .profile-counts {
+    display: -moz-box;
+    -moz-box-orient: horizontal;
+    -moz-box-sizing: border-box;
+    width: 100%;
+}
+.profile-actions > .button + .button, .profile-actions > .button + .flexible-space, .profile-actions > .button + .followbutton-container {
+    margin-left: 10px;
+        margin-left-value: 10px;
+        margin-left-ltr-source: physical;
+        margin-left-rtl-source: physical;
+}
+.profile-actions > .button, .profile-actions > .followbutton-container {
+    display: block;
+    overflow: visible;
+        overflow-x: visible;
+        overflow-y: visible;
+}
+.twitter-data
+{
+    background-color: #fff !important; 
+    width: 100%;
+    font-size: 10px !important;
+}
+ul.stream-items no-end-item, ul.stream-items no-end-item li {
+    margin: 0px;
+        margin-top: 0px;
+        margin-right-value: 0px;
+        margin-bottom: 0px;
+        margin-left-value: 0px;
+        margin-left-ltr-source: physical;
+        margin-left-rtl-source: physical;
+        margin-right-ltr-source: physical;
+        margin-right-rtl-source: physical;
+    padding: 0px;
+        padding-top: 0px;
+        padding-right-value: 0px;
+        padding-bottom: 0px;
+        padding-left-value: 0px;
+        padding-left-ltr-source: physical;
+        padding-left-rtl-source: physical;
+        padding-right-ltr-source: physical;
+        padding-right-rtl-source: physical;
+    list-style-type: none;
+}
+.module.stream-item .stream-items > .stream-item-group-start, .module .stream-items > .stream-item:first-child {
+    border-top: medium none;
+}
+.tweet-stream .stream-tweet.stream-item-group-start, .tweet-stream .user-item.stream-item-group-start, .tweet-stream .stream-highlight.stream-item-group-start, .tweet-stream .stream-gap.stream-item-group-start, .tweet-stream .stream-tweet:first-child, .tweet-stream .empty-stream:first-child, .tweet-stream .stream-end.stream-item-group-start {
+    border-top: 1px solid rgb(230, 230, 230);
+}
+i {
+    background: url("https://ma.twimg.com/twitter-mobile/002eb83274992e8d1643e34b55f03bb628f23fcd/html5/applications/m5/assets/sprite_mobile.png") no-repeat scroll 0px 0px / 271px 236px transparent;
+}
+.module.stream-item .stream-items > .stream-item-group-start, .module .stream-items > .stream-item:first-child {
+    border-top: medium none;
+}
+.tweet-stream .stream-tweet.stream-item-group-start, .tweet-stream .user-item.stream-item-group-start, .tweet-stream .stream-highlight.stream-item-group-start, .tweet-stream .stream-gap.stream-item-group-start, .tweet-stream .stream-tweet:first-child, .tweet-stream .empty-stream:first-child, .tweet-stream .stream-end.stream-item-group-start {
+    border-top: 1px solid rgb(230, 230, 230);
+}
+.tweet-stream .stream-tweet {
+    background-color: white;
+}
+.tweet-item .tweet-body {
+    display: -moz-box;
+    -moz-box-orient: horizontal;
+    -moz-box-sizing: border-box;
+    width: 100%;
+}
+.stream-tweet {
+    font-size: 10px;
+    line-height: 18px;
+}
+
+.stream-tweet .full-name {
+    display: inline;
+    max-width: 100%;
+}
+
+.stream-item {
+    border-bottom: 1px solid rgb(238, 238, 238);
+    display: block;
+     
+}
+ul, li {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+
+.dir-ltr {
+    direction: ltr;
+    text-align: left;
+    unicode-bidi: embed;
+}
+.tweet-text {
+    word-wrap: break-word;
+}
+
+
+.avatar {
+    background-color: white;
+    border-radius: 4px;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        border-bottom-left-radius: 4px;
+    width: 48px;
+    height: 48px;
+}
+.tweet-image {
+    text-align: right;
+}
+
+
+.user-name .full-name {
+    overflow: hidden;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: bold;
+    vertical-align: bottom;
+    line-height: 18px;
+    display: inline-block;
+}
+.user-name .screen-name {
+    white-space: nowrap;
+}
+.full-name
+{
+    color: #000;
+}
+
+.screen-name {
+    color: rgb(153, 153, 153);
+    direction: ltr;
+    text-align: left;
+    unicode-bidi: embed;
+}
+.stream-tweet .user-name {
+    white-space: nowrap;
+    color: rgb(153, 153, 153);
+}
+
+.stream-tweet .user-name {
+    overflow: hidden;
+        overflow-x: hidden;
+        overflow-y: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -moz-box-flex: 1;
+    flex: 1 1 0%;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 0%;
+    color: rgb(153, 153, 153);
+    margin-right: 5px;
+        margin-right-value: 5px;
+        margin-right-ltr-source: physical;
+        margin-right-rtl-source: physical;
+}
+
+.stream-item-wrapper .tweet-row {
+    line-height: 18px;
+}
+.stream-tweet > .stream-item-wrapper {
+    background: #fff;
+    padding: 10px 10px 14px;
+        padding-top: 10px;
+        padding-right-value: 10px;
+        padding-bottom: 14px;
+        padding-left-value: 10px;
+        padding-left-ltr-source: physical;
+        padding-left-rtl-source: physical;
+        padding-right-ltr-source: physical;
+        padding-right-rtl-source: physical;
+}
+.stream-item-wrapper.tweet-item {
+    display: block;
+}
+.tweet-content {
+    -moz-box-flex: 1;
+    flex: 1 1 0%;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 0%;
+    min-height: 48px;
+    margin: -2px 0px -4px 8px;
+        margin-top: -2px;
+        margin-right-value: 0px;
+        margin-bottom: -4px;
+        margin-left-value: 8px;
+        margin-left-ltr-source: physical;
+        margin-left-rtl-source: physical;
+        margin-right-ltr-source: physical;
+        margin-right-rtl-source: physical;
+}
